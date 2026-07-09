@@ -1,24 +1,41 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { EduHeader } from "@/components/EduHeader";
+import { Hero } from "@/components/Hero";
+import { RoleTabs } from "@/components/RoleTabs";
+import { Features } from "@/components/Features";
+import { DemoCTA } from "@/components/DemoCTA";
+import { Footer } from "@/components/Footer";
+import { VoiceAsk } from "@/components/VoiceAsk";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <EduHeader />
+      <main>
+        <Hero />
+        <RoleTabs />
+        <section id="voice" className="px-4 py-24 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Ask anything. Learn everything.
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              The floating AI tutor button gives every learner instant help. Tap it, type or speak, and get explanations that match your level.
+            </p>
+            <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 text-sm text-muted-foreground">
+              Try the mic button in the bottom-right corner.
+            </div>
+          </div>
+        </section>
+        <Features />
+        <DemoCTA />
+      </main>
+      <Footer />
+      <VoiceAsk />
     </div>
   );
 }
