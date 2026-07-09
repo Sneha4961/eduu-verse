@@ -30,7 +30,7 @@ export function Footer() {
           <div>
             <h4 className="font-display text-sm font-semibold">Connect</h4>
             <div className="mt-3 flex gap-3">
-              <a href="#" className="text-muted-foreground hover:text-foreground"><Github className="h-5 w-5" /></a>
+              <a href="https://github.com/Sneha4961/eduu-verse" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground"><Github className="h-5 w-5" /></a>
               <a href="#" className="text-muted-foreground hover:text-foreground"><Twitter className="h-5 w-5" /></a>
               <a href="#" className="text-muted-foreground hover:text-foreground"><Linkedin className="h-5 w-5" /></a>
               <a href="#" className="text-muted-foreground hover:text-foreground"><Globe className="h-5 w-5" /></a>
