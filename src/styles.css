@@ -199,11 +199,10 @@
 
 @utility ask-fab {
   transition: all 0.2s ease;
-}
-
-@utility ask-fab:hover {
-  transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 12px 28px -8px color-mix(in oklab, var(--color-coral) 35%, transparent);
+  &:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 12px 28px -8px color-mix(in oklab, var(--color-coral) 35%, transparent);
+  }
 }
 
 @utility tab-active {
@@ -214,11 +213,10 @@
 @utility tab-inactive {
   background-color: transparent;
   color: var(--color-muted-foreground);
-}
-
-@utility tab-inactive:hover {
-  background-color: var(--color-muted);
-  color: var(--color-foreground);
+  &:hover {
+    background-color: var(--color-muted);
+    color: var(--color-foreground);
+  }
 }
 
 @utility gradient-hero {
